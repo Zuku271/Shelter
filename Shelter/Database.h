@@ -1,6 +1,7 @@
 #pragma once
 #include <fstream>
-#include <vector>
+#include <list>
+
 
 using namespace std;
 
@@ -9,11 +10,13 @@ class Database
 
 private:
 	fstream file;
-	vector<string> *loadedDB;
+	list<string> loadedDB;
 
 public:
 	Database(const char*, unsigned int);
 	~Database();
+	
+	void getAllPets(void);
 
 
 };

@@ -6,6 +6,7 @@
 #include <string>
 #include "stdafx.h"
 #include "Database.h"
+#include "s_list.h"
 
 using namespace std;
 
@@ -19,11 +20,21 @@ int main()
 	string PetName;
 	string End = "n";
 	fstream file;
-	
-	Database db("data.txt", ios::in | ios::out);
 
+	s_list lista("A");
+	lista.append(&lista,"B");
+	lista.showAll(&lista);
+	lista.drop(&lista);
+
+	Database db("data.txt", ios::in | ios::out);
+	db.getAllPets();
 	cout << "Max. number of pets:" << endl;
 	cin >> MaxSlot;
+
+	if (MaxSlot == 0)
+	{
+		return 1;
+	}
 
 	do
 	{
