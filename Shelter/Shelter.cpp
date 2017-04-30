@@ -24,7 +24,7 @@ int main()
 	s_list lista("A");
 	lista.append(&lista,"B");
 	lista.showAll(&lista);
-	lista.drop(&lista);
+	//lista.~s_list();
 
 	Database db("data.txt", ios::in | ios::out);
 	db.getAllPets();
