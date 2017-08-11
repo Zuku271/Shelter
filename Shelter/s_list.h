@@ -5,6 +5,8 @@ using namespace std;
 
 class s_list
 {
+public:
+	static int c;
 private:
 	string value;
 	s_list *next;
@@ -18,4 +20,5 @@ public:
 	void drop(s_list *);
 	string pop(void);
 	void showAll(s_list *);
+	void functionC(void);
 };

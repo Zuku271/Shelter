@@ -56,3 +56,9 @@ void s_list::showAll(s_list *_list)
 	}
 	cout << _list->value << endl;
 }
+
+void s_list::functionC(void)
+{
+	c = 1;
+}
+int s_list::c = 0;

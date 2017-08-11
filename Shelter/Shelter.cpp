@@ -14,6 +14,10 @@ void ShowPetList(vector<string>);
 
 int main()
 {
+	s_list list2("A");
+	cout << list2.c << endl;
+	list2.functionC();
+	cout << list2.c << endl;
 	int MaxSlot;
 	vector<string> PetList;
 	string Action;
